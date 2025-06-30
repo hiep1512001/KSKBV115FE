@@ -6,7 +6,7 @@ import BieuDoCotNam from './BieuDoCotNam';
 const Dashboard = () => {
     return (
         <div className="container py-4">
-            <h2 className="mb-4 fw-bold">📊 Tổng Quan Hệ Thống</h2>
+            <h2 className="mb-4 fw-bold">🏥❤️115 Khám Sức Khỏe Năm 2025</h2>
             {/* Cards Section */}
             <div className="row g-4 mb-4">
                 <div className="col-12 col-sm-6 col-lg-3">
@@ -36,7 +36,7 @@ const Dashboard = () => {
             </div>
 
             {/* Charts Section */}
-            <div className="row d-4">
+            <div className="row g-4">
                 <div className='col-12'>
                     <div className="bg-white border rounded p-3 shadow-sm">
                         <h5 className="mb-3">Sản lượng hạt theo quốc gia</h5>

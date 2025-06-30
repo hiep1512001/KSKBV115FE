@@ -5,17 +5,27 @@ import App from './App';
 import '@syncfusion/ej2-base/styles/bootstrap5.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 
-
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 import { registerLicense } from '@syncfusion/ej2-base';
+import appReducer from './reducers';
 registerLicense('Ngo9BigBOggjHTQxAR8/V1NNaF1cWWhOYVF3WmFZfVtgdV9FY1ZUQ2YuP1ZhSXxWdkNhWH9fdHVQRWdZVkZ9XUs=');
+const store = createStore(
+  appReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 

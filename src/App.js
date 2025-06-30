@@ -1,21 +1,21 @@
-
-import './App.css';
-import Dashboard from './Components/Dashboar';
-import Menu from './Components/Menu';
+// App.js
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Layout/layout';
 import TrangChu from './pages/TrangChu';
-
+import TraCuu from './pages/TraCuu';
+import ThongKe from './pages/ThongKe';
+// import NotFound from './pages/NotFound'; // nếu cần
 
 const App = () => {
   return (
-    <div className='container-fluid' >
-      <div className='row'>
-        <Menu></Menu>
-      </div>
-      <div className='container mt-2'>
-        <TrangChu></TrangChu>
-        <Dashboard></Dashboard>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<TrangChu />} /> {/* tương đương path="/" */}
+        <Route path="TraCuu" element={<TraCuu />} />
+        <Route path="ThongKe" element={<ThongKe />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Route>
+    </Routes>
   );
 };
 

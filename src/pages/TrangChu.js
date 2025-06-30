@@ -1,17 +1,11 @@
-import BieuDoCot from "../Components/BieuDoCot"
-import BieuDoTron from "../Components/BieuDoTron"
+import Dashboard from "../Components/Dashboar"
+
 
 const TrangChu = () => {
     return (
         <div>
-            <div className="row">
-                <BieuDoTron></BieuDoTron>
-            </div>
-            <div className="row">
-                <BieuDoCot></BieuDoCot>
-            </div>
+            <Dashboard></Dashboard>
         </div>
-
     )
 }
 export default TrangChu
