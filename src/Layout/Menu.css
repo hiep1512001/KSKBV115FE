@@ -1,0 +1,42 @@
+/* Navbar tổng thể */
+.navbar {
+    background-color: #198754;
+    /* Bootstrap bg-success */
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Logo app tròn gọn */
+.navbar img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Các mục menu canh giữa và cách đều */
+.navbar-nav .nav-item {
+    margin-right: 1rem;
+}
+
+/* Link cơ bản */
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Hover nhẹ nhàng */
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Active nổi bật nhưng tinh tế */
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
