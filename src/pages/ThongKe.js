@@ -1,6 +1,25 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const ThongKe = () => {
+const ThongKe = (props) => {
+    const elementSelect = () => {
+        const nams = props?.nams ?? [];
+        if (!nams || nams.length === 0) {
+            return <p>Không có dữ liệu năm</p>;
+        }
+
+        const elementNam = nams.map((value, index) => (
+            <option key={index} value={value.maNam}>
+                {value.tenNam}
+            </option>
+        ));
+
+        return (
+            <select className="form-select">
+                {elementNam}
+            </select>
+        );
+    }
     return (
         <div>
             <div className="row">
@@ -22,13 +41,7 @@ const ThongKe = () => {
                             {/* Chọn năm */}
                             <div className="mb-3">
                                 <label className="form-label fw-bold">Năm</label>
-                                <select className="form-select">
-                                    <option value="">-- Chọn năm --</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2022">2022</option>
-                                </select>
+                                {elementSelect()}
                             </div>
 
                             <button className="btn btn-primary w-100 mt-2">
@@ -41,5 +54,14 @@ const ThongKe = () => {
         </div>
     );
 };
+const mapStateToProp = (state) => {
+    return {
+        nams: state.taskNam
+    };
+};
+const mapDispatchToProps = (dispatch, props) => {
+    return {
 
-export default ThongKe;
+    };
+};
+export default connect(mapStateToProp, mapDispatchToProps)(ThongKe);

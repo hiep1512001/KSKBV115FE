@@ -13,7 +13,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import { registerLicense } from '@syncfusion/ej2-base';
 import appReducer from './reducers';
-registerLicense('Ngo9BigBOggjHTQxAR8/V1NNaF1cWWhOYVF3WmFZfVtgdV9FY1ZUQ2YuP1ZhSXxWdkNhWH9fdHVQRWdZVkZ9XUs=');
+registerLicense('Ngo9BigBOggjHTQxAR8/V1JFaF5cXGRCf1NpR2FGfV5ycUVCal5RTnNXUiweQnxTdEBjUH1ccHBXR2FfVUR/W0leYg==');
 const store = createStore(
   appReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

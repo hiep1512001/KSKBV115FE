@@ -8,7 +8,8 @@ const Menu = (props) => {
     const menuItems = [
         { name: "Trang chủ", to: "/", type: typeMenu.MENUTRANGCHU },
         { name: "Tra cứu", to: "/TraCuu", type: typeMenu.MENUTRACUU },
-        { name: "Thống kê", to: "/ThongKe", type: typeMenu.MENUTHONGKE }
+        { name: "Thống kê", to: "/ThongKe", type: typeMenu.MENUTHONGKE },
+        { name: "Quản lý", to: "/QuanLy", type: typeMenu.MENUQUANLY }
     ];
 
     return (
