@@ -6,7 +6,7 @@ import TraCuu from './pages/TraCuu';
 import ThongKe from './pages/ThongKe';
 import Login from './pages/Login';
 import NotFound from './pages/Notfound';
-import QuanLy from './pages/QuanLy';
+
 // import NotFound from './pages/NotFound'; // nếu cần
 
 const App = () => {
@@ -16,7 +16,6 @@ const App = () => {
         <Route index element={<TrangChu />} /> {/* tương đương path="/" */}
         <Route path="TraCuu" element={<TraCuu />} />
         <Route path="ThongKe" element={<ThongKe />} />
-        <Route path="QuanLy" element={<QuanLy />} />
         <Route path="Login" element={<Login />} />
         <Route path="*" element={<NotFound />} />
       </Route>
